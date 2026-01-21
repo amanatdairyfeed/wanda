@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network - Amanat Dairy Feed</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .network-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="Amanat Dairy Feed Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="laboratory.html">Laboratory</a></li>
+                    <li><a href="network.html" class="active">Network</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <a href="network-ur.html" class="lang-btn">
+                            اردو
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="height: 90px;"></div>
+
+    <!-- 1. Hero -->
+    <section
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/cows-eating.jpg') center/cover no-repeat; padding: 100px 0; text-align: center; color: white;">
+        <div class="container" data-aos="fade-up">
+            <h1 style="font-size: 3rem; color: white;">We Are Everywhere</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #ddd;">Search our
+                extensive network of authorized dealers and medical experts across the region.</p>
+        </div>
+    </section>
+
+    <!-- 2. Search Tool -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: var(--shadow); display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-end;"
+                data-aos="fade-up">
+                <div style="flex: 2; min-width: 250px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 700;">Search by City</label>
+                    <input type="text" id="citySearch" placeholder="E.g. Kasur, Lahore, Multan"
+                        style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 700;">Filter by Type</label>
+                    <select id="typeFilter"
+                        style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                        <option value="All">Show All</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Seller">Seller</option>
+                        <option value="Agent">Company Agent</option>
+                        <option value="Doctor">Free Doctor Help</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Results Grid -->
+    <section class="section-padding bg-light" style="min-height: 400px;">
+        <div class="container">
+            <div id="networkResults"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+                <!-- JS will fill this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Map Placeholder -->
+    <section class="section-padding">
+        <div class="container" style="text-align: center;">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Coverage Map</h2>
+            </div>
+            <div style="background: #eee; height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #999;"
+                data-aos="zoom-in">
+                [ Map Integration Placeholder ]
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Dealer Benefits -->
+    <section class="section-padding" style="background: var(--text-dark); color: white;">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+                    <h2 style="color: white;">Become a Distributor</h2>
+                    <p style="color: #aaa; margin-bottom: 30px;">Join the Amanat family and grow your business with a
+                        product that sells itself.</p>
+                    <ul style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i> High Profit Margins</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i> Exclusive Territory Rights
+                        </li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-right: 10px;"></i> Marketing Support</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Apply Now</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+                    <!-- Icon or image representing partnership -->
+                    <i class="fa-solid fa-handshake" style="font-size: 10rem; color: #333;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #111; color: #aaa; padding: 80px 0 30px;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; 2026 Amanat Dairy Feed (Pvt) Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/network-data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const resultsContainer = document.getElementById('networkResults');
+        const citySearch = document.getElementById('citySearch');
+        const typeFilter = document.getElementById('typeFilter');
+
+        function renderNetwork(data) {
+            resultsContainer.innerHTML = '';
+            if (data.length === 0) {
+                resultsContainer.innerHTML = '<p>No matching results found.</p>';
+                return;
+            }
+            data.forEach(item => {
+                const html = `
+                    <div class="network-card" data-aos="fade-up">
+                        <div style="display:flex; justify-content:space-between; align-items:start;">
+                            <div>
+                                <h4 style="margin: 0;">${item.name}</h4>
+                                <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-light); letter-spacing: 1px;">${item.type}</span>
+                            </div>
+                            <i class="fa-solid ${item.type === 'Doctor' ? 'fa-user-md' : 'fa-store'}" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        </div>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                        <p style="margin-bottom: 5px;"><i class="fa-solid fa-location-dot" style="width: 20px; color: var(--text-light);"></i> ${item.area}, ${item.city}</p>
+                        <p><i class="fa-solid fa-phone" style="width: 20px; color: var(--text-light);"></i> <strong>${item.contact}</strong></p>
+                    </div>
+                `;
+                resultsContainer.innerHTML += html;
+            });
+        }
+
+        function filterData() {
+            const city = citySearch.value.toLowerCase();
+            const type = typeFilter.value;
+            const filtered = networkData.filter(item => {
+                const cityMatch = item.city.toLowerCase().includes(city) || item.area.toLowerCase().includes(city);
+                const typeMatch = type === 'All' || item.type === type;
+                return cityMatch && typeMatch;
+            });
+            renderNetwork(filtered);
+        }
+
+        citySearch.addEventListener('input', filterData);
+        typeFilter.addEventListener('change', filterData);
+        renderNetwork(networkData);
+    </script>
+</body>
+
+</html>

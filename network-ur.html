@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نیٹ ورک - امانت ڈیری فیڈ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .network-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-right: 5px solid var(--primary-color);
+        }
+    </style>
+</head>
+
+<body class="urdu-page">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index-ur.html" class="logo">
+                    <img src="img/logo.png" alt="Amanat Dairy Feed Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index-ur.html" class="urdu-text">ہوم</a></li>
+                    <li><a href="about-ur.html" class="urdu-text">ہمارے بارے میں</a></li>
+                    <li><a href="products-ur.html" class="urdu-text">مصنوعات</a></li>
+                    <li><a href="laboratory-ur.html" class="urdu-text">لیبارٹری</a></li>
+                    <li><a href="network-ur.html" class="active urdu-text">نیٹ ورک</a></li>
+                    <li><a href="blogs-ur.html" class="urdu-text">بلاگز</a></li>
+                    <li><a href="contact-ur.html" class="urdu-text">رابطہ کریں</a></li>
+                    <li>
+                        <a href="network.html" class="lang-btn">
+                            English
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="height: 90px;"></div>
+
+    <!-- 1. Hero -->
+    <section
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/cows-eating.jpg') center/cover no-repeat; padding: 100px 0; text-align: center; color: white;">
+        <div class="container" data-aos="fade-up">
+            <h1 class="urdu-text" style="font-size: 3rem; color: white;">ہم ہر جگہ ہیں</h1>
+            <p class="urdu-text" style="font-size: 1.3rem; max-width: 700px; margin: 0 auto; color: #ddd;">
+                خطے بھر میں ہمارے مجاز ڈیلرز اور طبی ماہرین کا وسیع نیٹ ورک تلاش کریں۔</p>
+        </div>
+    </section>
+
+    <!-- 2. Search Tool -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: var(--shadow); display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-end;"
+                data-aos="fade-up">
+                <div style="flex: 2; min-width: 250px;">
+                    <label class="urdu-text" style="display: block; margin-bottom: 10px; font-weight: 700;">شہر کے لحاظ
+                        سے تلاش کریں</label>
+                    <input type="text" id="citySearch" placeholder="مثلاً قصور، لاہور، ملتان" class="urdu-text"
+                        style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <label class="urdu-text" style="display: block; margin-bottom: 10px; font-weight: 700;">قسم کے لحاظ
+                        سے فلٹر کریں</label>
+                    <select id="typeFilter" class="urdu-text"
+                        style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                        <option value="All">تمام</option>
+                        <option value="Dealer">ڈیلر</option>
+                        <option value="Seller">سیلر</option>
+                        <option value="Agent">کمپنی ایجنٹ</option>
+                        <option value="Doctor">مفت ڈاکٹر ہیلپ</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Results Grid -->
+    <section class="section-padding bg-light" style="min-height: 400px;">
+        <div class="container">
+            <div id="networkResults"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+                <!-- JS will fill this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Map Placeholder -->
+    <section class="section-padding">
+        <div class="container" style="text-align: center;">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="urdu-text">کوریج کا نقشہ</h2>
+            </div>
+            <div style="background: #eee; height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #999;"
+                data-aos="zoom-in">
+                [ Map Integration Placeholder ]
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Dealer Benefits -->
+    <section class="section-padding" style="background: var(--text-dark); color: white;">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+                    <h2 class="urdu-text" style="color: white;">ڈسٹری بیوٹر بنیں</h2>
+                    <p class="urdu-text" style="color: #aaa; margin-bottom: 30px;">امانت فیملی میں شامل ہوں اور اپنے
+                        کاروبار کو ایسی پروڈکٹ کے ساتھ بڑھائیں جو خود اپنی پہچان ہے۔</p>
+                    <ul class="urdu-text" style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-left: 10px;"></i> اعلی منافع کا مارجن</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-left: 10px;"></i> خصوصی علاقائی حقوق</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check"
+                                style="color: var(--primary-color); margin-left: 10px;"></i> مارکیٹنگ سپورٹ</li>
+                    </ul>
+                    <a href="contact-ur.html" class="btn urdu-text">ڈیلر بنیں</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+                    <i class="fa-solid fa-handshake" style="font-size: 10rem; color: #333;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #111; color: #aaa; padding: 80px 0 30px;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; 2026 Amanat Dairy Feed (Pvt) Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/network-data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const resultsContainer = document.getElementById('networkResults');
+        const citySearch = document.getElementById('citySearch');
+        const typeFilter = document.getElementById('typeFilter');
+
+        const typeMap = {
+            'Dealer': 'ڈیلر',
+            'Seller': 'سیلر',
+            'Agent': 'ایجنٹ',
+            'Doctor': 'ڈاکٹر'
+        };
+
+        function renderNetwork(data) {
+            resultsContainer.innerHTML = '';
+            if (data.length === 0) {
+                resultsContainer.innerHTML = '<p class="urdu-text">کوئی نتیجہ نہیں ملا۔</p>';
+                return;
+            }
+            data.forEach(item => {
+                const urduType = typeMap[item.type] || item.type;
+                const html = `
+                    <div class="network-card" data-aos="fade-up">
+                        <div style="display:flex; justify-content:space-between; align-items:start;">
+                            <div>
+                                <h4 class="urdu-text" style="margin: 0;">${item.name}</h4>
+                                <span class="urdu-text" style="font-size: 0.8rem; color: var(--text-light);">${urduType}</span>
+                            </div>
+                            <i class="fa-solid ${item.type === 'Doctor' ? 'fa-user-md' : 'fa-store'}" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        </div>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                        <p class="urdu-text" style="margin-bottom: 5px;"><i class="fa-solid fa-location-dot" style="width: 20px; color: var(--text-light);"></i> ${item.area}, ${item.city}</p>
+                        <p class="urdu-text" style="direction: ltr; text-align: right;"><i class="fa-solid fa-phone" style="width: 20px; color: var(--text-light);"></i> <strong>${item.contact}</strong></p>
+                    </div>
+                `;
+                resultsContainer.innerHTML += html;
+            });
+        }
+
+        function filterData() {
+            const city = citySearch.value.toLowerCase();
+            const type = typeFilter.value;
+            const filtered = networkData.filter(item => {
+                const cityMatch = item.city.toLowerCase().includes(city) || item.area.toLowerCase().includes(city);
+                const typeMatch = type === 'All' || item.type === type;
+                return cityMatch && typeMatch;
+            });
+            renderNetwork(filtered);
+        }
+
+        citySearch.addEventListener('input', filterData);
+        typeFilter.addEventListener('change', filterData);
+        renderNetwork(networkData);
+    </script>
+</body>
+
+</html>
